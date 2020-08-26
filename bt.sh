@@ -14,10 +14,10 @@ case $choice in
 	1)
 	mkdir /www/server/panel/vhost/cert/www.bt.cn -p
 	mkdir /www/wwwroot/www.bt.cn -p
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/bt.php -o /www/wwwroot/www.bt.cn/bt.php
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/www.bt.cn.conf -o /www/server/panel/vhost/nginx/www.bt.cn.conf
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/privkey.pem -o /www/server/panel/vhost/cert/www.bt.cn/key.key
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/fullchain.pem -o /www/server/panel/vhost/cert/www.bt.cn/bt.pem
+	curl https://raw.githubusercontent.com/madlifer/AaPanel_Crack/master/bt.php -o /www/wwwroot/www.bt.cn/bt.php
+	curl https://raw.githubusercontent.com/madlifer/AaPanel_Crack/master/www.bt.cn.conf -o /www/server/panel/vhost/nginx/www.bt.cn.conf
+	curl https://raw.githubusercontent.com/madlifer/AaPanel_Crack/master/privkey.pem -o /www/server/panel/vhost/cert/www.bt.cn/key.key
+	curl https://raw.githubusercontent.com/madlifer/AaPanel_Crack/master/fullchain.pem -o /www/server/panel/vhost/cert/www.bt.cn/bt.pem
 	chown www:www /www/wwwroot/www.bt.cn/* -R
 	/etc/init.d/nginx reload
 	echo "127.0.0.1 www.bt.cn" >> /etc/hosts
