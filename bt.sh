@@ -14,10 +14,10 @@ case $choice in
 	1)
 	mkdir /www/server/panel/vhost/cert/www.bt.cn -p
 	mkdir /www/wwwroot/www.bt.cn -p
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/bt.php?token=AG4WS5TN4XFVAPB2G7AAVOS7IXTQE -o /www/wwwroot/www.bt.cn/bt.php
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/www.bt.cn.conf?token=AG4WS5VNQ5E5QGFPR2DU2GK7IXTSC -o /www/server/panel/vhost/nginx/www.bt.cn.conf
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/privkey.pem?token=AG4WS5TMWABDHISAPH7DODS7IXTU4 -o /www/server/panel/vhost/cert/www.bt.cn/key.key
-	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/fullchain.pem?token=AG4WS5Q4IFORWCSU64N3ZU27IXTTY -o /www/server/panel/vhost/cert/www.bt.cn/bt.pem
+	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/bt.php -o /www/wwwroot/www.bt.cn/bt.php
+	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/www.bt.cn.conf -o /www/server/panel/vhost/nginx/www.bt.cn.conf
+	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/privkey.pem -o /www/server/panel/vhost/cert/www.bt.cn/key.key
+	curl https://raw.githubusercontent.com/madlifer/bt-crack/master/fullchain.pem -o /www/server/panel/vhost/cert/www.bt.cn/bt.pem
 	chown www:www /www/wwwroot/www.bt.cn/* -R
 	/etc/init.d/nginx reload
 	echo "127.0.0.1 www.bt.cn" >> /etc/hosts
